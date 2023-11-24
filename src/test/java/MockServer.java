@@ -8,14 +8,15 @@ public class MockServer {
 
     @Test
     public void standAlone() {
-        Response response = RestAssured.given().get("http://localhost:8080/user/1").then().statusCode(200).extract().response();
-        System.out.println(response.asString());
+        Response response = RestAssured.given().get("http://localhost:8080/subcription").then().statusCode(200).extract().response();
+//        System.out.println(response.asString());
+//        System.out.println(response)
     }
 
     @Test
     public void docker() {
-        Response response = RestAssured.given().get("http://localhost:9090/user/1").then().statusCode(200).extract().response();
-        System.out.println(response.asString());
+        Response response = RestAssured.given().get("http://localhost:9090/v1/location").then().statusCode(200).extract().response();
+//        System.out.println(response.asString());
     }
 
 }

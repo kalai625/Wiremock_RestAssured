@@ -1,16 +1,15 @@
 {
-
   "request": {
-    "urlPathPattern": "/subcription",
+    "urlPathPattern": "/v1/location",
     "method": "GET"
   },
   "response": {
     "status": 200,
     "jsonBody": {
-      "subcription_info": {
-        "amount": "499",
-        "validity": "28 days",
-        "device": "MACBOOK_LAP"
+      "company_info": {
+        "ZIPCODE": "636903",
+        "country": "INDIA",
+        "location": "SALEM"
       }
     },
     "headers": {
