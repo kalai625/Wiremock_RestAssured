@@ -1,0 +1,19 @@
+version: "3"
+services:
+  wiremock:
+    image: "wiremock/wiremock:latest"
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./__files:/home/wiremock/__files
+      - ./mappings:/home/wiremock/mappings
+    entrypoint: ["/docker-entrypoint.sh", "--global-response-templating", "--disable-gzip", "--verbose"]
+
+  #version: '3'
+  #services:
+  #  app:
+  #    image: my-app-image
+  #    ports:
+  #      - "8080:80"
+  #  db:
+  #    image: my-database-image
